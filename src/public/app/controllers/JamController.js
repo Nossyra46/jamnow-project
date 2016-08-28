@@ -23,6 +23,8 @@ jamApp.controller('JamController', ['$scope', '$http', 'ApiFactory', function($s
  		.then(function(response){
  			this.response = 'omg you did it !';
  			console.log(this.response);
+      console.log(response.data._id);
+      var id = response.data._id;
  		}, function(err) {
  			this.response = 'ONOES';
  			console.log(this.response);
