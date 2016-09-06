@@ -1,4 +1,4 @@
-<div class="row" ng-controller="JamController as jamCtrl">
+<div class="row" ng-controller="NewjamController as newjamCtrl">
   <form class="col s12">
     <div class="row newjam-card-black">
       <h3>Créer une Jam</h3>
@@ -13,36 +13,36 @@
       </div>
     </div>
       <div class="input-field col s12">
-        <textarea id="textarea1" class="materialize-textarea" ng-model="jamCtrl.name"></textarea>
+        <textarea id="textarea1" class="materialize-textarea" ng-model="newjamCtrl.name"></textarea>
         <label for="textarea1">Nom de la Jam</label>
       </div>
       <div class="input-field col s12">
-        <textarea id="textarea1" class="materialize-textarea" length="144" ng-model="jamCtrl.description"></textarea>
+        <textarea id="textarea1" class="materialize-textarea" length="144" ng-model="newjamCtrl.description"></textarea>
         <label for="textarea1">Ajouter une description. (144 caractères maximum)</label>
       </div>
     </div>
       <div class="row card-jam newjam-card">
         <div class="input-field col s12">
             <i class="material-icons prefix">date_range</i>
-            <input id="icon_prefix" type="date" class="datepicker" ng-model="jamCtrl.date">
+            <input id="icon_prefix" type="date" class="datepicker" ng-model="newjamCtrl.date">
       </div>
         <div class="input-field col s12">
             <i class="material-icons prefix">schedule</i>
-            <input id="icon_prefix" type="text" class="validate" ng-model="jamCtrl.hour">
+            <input id="icon_prefix" type="text" class="validate" ng-model="newjamCtrl.hour">
             <label for="icon_prefix">Heure</label>
       </div>
       <div class="input-field col s12">
           <i class="material-icons prefix">location_on</i>
-          <input id="icon_prefix" type="text" class="validate" ng-model="jamCtrl.location">
+          <input id="icon_prefix" type="text" class="validate" ng-model="newjamCtrl.location">
           <label for="icon_prefix">Endroit</label>
       </div>
       <div class="input-field col s12">
         <i class="material-icons prefix">people</i>
-        <input id="icon_prefix" type="text" class="validate" ng-model="jamCtrl.limit">
+        <input id="icon_prefix" type="text" class="validate" ng-model="newjamCtrl.limit">
         <label for="icon_prefix">Nombre maximum de participants</label>
       </div>
       <div class="col s6 offset-s6">
-      <button class="btn waves-effect waves-light pink" type="submit" name="action" ng-click="jamCtrl.addJam()">Envoyer
+      <button class="btn waves-effect waves-light pink" type="submit" name="action" ng-click="newjamCtrl.addJam()">Envoyer
       <i class="material-icons right">send</i>
     </div>
 </button>
