@@ -1,32 +1,10 @@
-@media(max-width: 732px){
-	.nav {
-	background-color: transparent;
-	box-shadow: none;
-	border:none;
-	}
-	.nav-wrapper{
-	border-radius: none;
-	background-color: transparent;
-	color:rgb(27,38,42);
-
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	.brand-logo {
-		// color:rgb(27,38,42);
-		font-size: 36px;
-		}	
-	}
-}
-
 // VERSION DESKTOP
 
 .nav {
 	background-color: transparent;
 	box-shadow: none;
 	border:none;
-	
+
 	.nav-liste  {
 		font-size: 34px;
 	}
@@ -34,13 +12,48 @@
 	border-radius: none;
 	background-color: transparent;
 	color:rgb(27,38,42);
-
-	position: absolute;
+	// position: absolute;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	.brand-logo {
-		margin-left: 10%;
+		.brand-logo {
+			margin-left: 5%;
+		}
+	}
+}
+
+
+// VERSION MOBILE
+@media(max-width: 768px){
+	.nav {
+		.nav-wrapper {
+			.brand-logo {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+@media(max-width: 732px){
+	.nav {
+		background-color: transparent;
+		box-shadow: none;
+		border:none;
+
+		.nav-wrapper{
+			border-radius: none;
+			background-color: transparent;
+			color:rgb(27,38,42);
+			// position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			.brand-logo {
+				// color:rgb(27,38,42);
+				font-size: 36px;
+				margin-left: 0;
+			}
 		}
 	}
 }

@@ -2,29 +2,22 @@
 
 .home-search-bar {
 	color:rgb(27,38,42);
-		
-		.home-search {
-		
+	width: 100%;
+
+	.home-search {
 		background-color:white;
-		font-size:17px;
+		// font-size:17px;
 		color:rgb(27,38,42);
-		padding-top: 5px;
-		padding-bottom: 5px;
+		padding: 5px 0;
 		border-radius: 3px;
 	}
 }
 
 @media(max-width: 732px) {
+	.home-search-bar {
 
-		.home-search-bar {
-		color:rgb(27,38,42);
-		margin-bottom: 20px;
 		.home-search {
-		font-size:15px;
-		color:rgb(27,38,42);
-		background-color:white;
-
+			font-size: 13px;
 		}
-	}	
+	}
 }
-

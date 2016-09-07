@@ -1,9 +1,9 @@
 <!-- BANNIERE -->
 
 <div class="row">
-  <div class="center col s12">
+  <div class="col s12">
       <div class="home-pitch">
-        <h1 class="home-pitch-texte center-align">Vivez la musique. <br> Maintenant.</h1>
+        <h1 class="home-pitch-texte center-align">Vivez la musique.<br>Maintenant.</h1>
       </div>
   </div>
 </div>
@@ -13,7 +13,7 @@
 <!-- AUTHENTIFICATION -->
 
 <div class="row">
-  <div class="center col s12">
+  <div class="col s12">
     <div class="auth">
       <div class="row">
         <a class="home-btn-inscription waves-effect waves-light btn" ui-sref="inscription.idform">S'inscrire</a>
@@ -30,11 +30,11 @@
 <!-- SEARCH BAR -->
 
 <div class="row">
-  <div class="col s12 offset-l2 l8">
+  <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
     <form>
       <div class="input-field home-search-bar">
-        <input id="home-search" type="search" class="home-search" required placeholder="Quel type de Jam voulez-vous rejoindre ?">
-        <label form="home-search"><i class="material-icons home-icon-search"></i></label>
+        <input id="home-search" type="search" required class="home-search" placeholder="Quel type de Jam voulez-vous rejoindre ?">
+        <label for="home-search"></label>
       </div>
     </form>
   </div>
@@ -51,17 +51,17 @@
     </div>
     <!-- END TITLE JAMS -->
     <!-- JAMS LOCATIONS -->
-    <div class="container-cards-jam-home">
+    <div class="container-cards-jam-home grey lighten-4">
       <!-- #1 CARD-->
       <div class="row">
         <div class="card-jam-home">
-          <div class="col s6 offset-s2 m6 offset-m2 l6 offset-l2">
+          <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
             <div class="card-jam-home-title">
-              <i class="material-icons">play_arrow</i>
+              <i class="material-icons icon-arrow">play_arrow</i>
               <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">SIMPLON JAM!</a>
             </div>
           </div>
-          <div class="col s2 m2 l2">
+          <div class="col s2 m2 l3">
             <div class="card-jam-home-info">
               <p class="center-align">12 août</p>
             </div>
@@ -72,13 +72,13 @@
       <!-- #2 CARD-->
       <div class="row">
           <div class="card-jam-home">
-            <div class="col s6 offset-s2 m6 offset-m2 l6 offset-l2">
+            <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
               <div class="card-jam-home-title">
-                <i class="material-icons">play_arrow</i>
+                <i class="material-icons icon-arrow">play_arrow</i>
                 <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">Fans de funk, venez !</a>
               </div>
             </div>
-            <div class="col s2 m2 l2">
+            <div class="col s2 m2 l3">
               <div class="card-jam-home-info">
                 <p class="center-align">29 août</p>
               </div>
@@ -89,13 +89,13 @@
       <!-- #3 CARD-->
       <div class="row">
           <div class="card-jam-home">
-            <div class="col s6 offset-s2 m6 offset-m2 l6 offset-l2">
+            <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
               <div class="card-jam-home-title">
-                <i class="material-icons">play_arrow</i>
+                <i class="material-icons icon-arrow">play_arrow</i>
                 <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">Amateurs de musique classique, opéra...</a>
               </div>
             </div>
-            <div class="col s2 m2 l2">
+            <div class="col s2 m2 l3">
               <div class="card-jam-home-info">
                 <p class="center-align">29 août</p>
               </div>
@@ -115,10 +115,16 @@
     <div class="container-title-pourquoi-jamnow-home">
       <h4 class="title-pourquoi-jamnow-home center-align">Pourquoi JAM!NOW ?</h4>
     </div>
-    <div class="container-text-pourquoi-home valign-wrapper">
-      <p class="text-pourquoi-home valign"> Nous avons tous à un moment de notre vie voulu chanter, jouer d’un instrument en collectif et sentir les vibrations communes. Nous avons tous à un moment de notre vie ressenti le plaisir de simplement écouter et regarder des personnes jouer. <br><br>JamNow est le moyen de facilité ces rencontres et de vous mettre en contact entre passionés de musique.</p>
+    <div class="row">
+      <div class="col s12 m4 l4">
+        <div class="container-text-pourquoi-home valign-wrapper">
+          <p class="text-pourquoi-home  valign"> Nous avons tous à un moment de notre vie voulu chanter, jouer d’un instrument en collectif et sentir les vibrations communes. Nous avons tous à un moment de notre vie ressenti le plaisir de simplement écouter et regarder des personnes jouer. <br><br><span id="text-pourquoi-emphase-home">JamNow est le moyen de faciliter ces rencontres et de vous mettre en contact entre passionnés de musique.</span></p>
+        </div>
+      </div>
+      <div class="col s12 m8 l8">
+        <div class="bg-img-pourquoi-home"></div>
+      </div>
     </div>
-    <div class="bg-img-pourquoi-home"></div>
   </div>
   <!-- END PITCH POURQUOI -->
 
@@ -151,7 +157,7 @@
     </div>
 
     <div class="container-text-cmt-home">
-      <p class="text-cmt-home"><a ui-sref="jam">Ou je rejoins une Jam déja organisée !</a></p>
+      <p class="text-cmt-home"><a ui-sref="jam">.. ou bien je rejoins une Jam déja organisée !</a></p>
     </div>
 
   </div>

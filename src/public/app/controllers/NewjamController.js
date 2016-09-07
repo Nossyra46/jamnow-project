@@ -27,7 +27,6 @@ jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory'
  			console.log(this.response);
       var id = response.data._id;
       $state.go('jam',({id_jam: id}));
-
  		}, function(err) {
  			this.response = 'ONOES';
  			console.log(this.response);

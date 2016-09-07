@@ -1,9 +1,17 @@
 // VERSION DESKTOP
 .home-pitch {
 	color:white;
+
+	.home-pitch-texte {
+		margin-top: 100px;
+	}
 }
 .container-jam-home {
 	width: 100%;
+}
+
+.auth {
+	margin: 50px 0;
 }
 
 
@@ -16,8 +24,31 @@
 
 	.container-title-jam-home {
 		width: 100%;
+		padding-bottom: 30px;
 	}
+
+	.container-cards-jam-home {
+		width: 80%;
+		margin: 0 auto;
+		padding: 30px 0 20px 0;
+		border-radius: 5px;
+
+		.card-jam-home {
+			.icon-arrow, .card-left-part-title {
+				vertical-align: middle;
+			}
+
+			.card-jam-home-info {
+				p {
+					margin: 0;
+				}
+			}
+		}
+	}
+
 }
+
+
 
 // POURQUOI JAM!NOW
 
@@ -26,13 +57,20 @@
 	padding: 30px 20px;
 
 	.title-pourquoi-jamnow-home {
-		padding: 25px 0;
+		padding: 0 0 25px 0;
 	}
 
 	.container-text-pourquoi-home {
-		display: inline-block;
-		width: 37%;
-		margin: 10px 0;
+		height: 400px;
+
+		.text-pourquoi-home {
+			text-align: justify;
+			margin: 0;
+
+			#text-pourquoi-emphase-home {
+				font-weight: 700;
+			}
+		}
 	}
 }
 
@@ -64,6 +102,18 @@
 	}
 }
 
+.container-text-cmt-home {
+	.text-cmt-home {
+		a {
+			color: #ffebee;
+
+		&:hover {
+			color: #ffffff;
+		}
+		}
+	}
+}
+
 // .comment-jamnow-home {
 // 	color:white;
 // 	font-size: 18px;
@@ -90,34 +140,47 @@
 // MOBILE VERSION
 @media(max-width: 732px){
 	.home-pitch {
-		margin-top: 30px;
-		display: flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items:center;
 
 		.home-pitch-texte {
-		font-size: 34px;
-		line-height: 50px;
+			margin-top: 30px;
+			font-size: 34px;
+			line-height: 50px;
 		}
 	}
 
-	.center {
-		display: flex;
-		flex-direction:column;
-		justify-content:center;
-		align-items: center;
+	.auth {
+		margin-top: 50px;
 	}
 
 	.home-icon-search {
-		color: black;
+		// color: black;
 	}
 
+
+
+	// POURQUOI JAM!NOW
 	.container-pourquoi-jamnow-home {
 
 		.container-text-pourquoi-home {
-			display: block;
-			width: 100%;
+			height: auto;
+
+			.text-pourquoi-home {
+				margin-bottom: 15px;
+			}
 		}
+	}
+
+
+	// COMMENT JAM!NOW
+	.container-cmt-home {
+		width: 100%;
+		padding: 30px 30px;
+
+
+		.steps-cmt-home {
+			display: inline-block;
+			width: 40%;
+		}
+
 	}
 }

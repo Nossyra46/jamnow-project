@@ -1,29 +1,3 @@
-// VERSION MOBILE
-
-@media(max-width: 732px){
-	.page-footer {
-		font-size: 25px;
-		margin-top: 0px;
-		width: 100%;
-
-		.footer-title1, .footer-title2{
-			font-size: 50px;
-		}
-		.footer-copyright{
-			font-size: 30px;
-			
-			.container {
-				
-				.footer-acceuil-link{
-					font-weight: 500;
-					letter-spacing: 2px;
-					font-size: 32px;
-				}
-			}
-		}
-	}
-}
-
 // VERSION DESKTOP
 .page-footer {
 		font-size: 12px;
@@ -37,17 +11,34 @@
 		.footer-copyright{
 			font-size: 12px;
 			letter-spacing: 1px;
-		
-				.footer-acceuil-link {
-					font-weight: 500;
-					letter-spacing: 1px;
-					font-size: 16px;
-					border-bottom: 4px solid white;
-					margin-right: 22%;
-				}
-			}
-			.footer-right-part {
-				line-height: 20px;
+
+			.footer-acceuil-link {
+				font-weight: 500;
+				letter-spacing: 1px;
+				font-size: 16px;
+				border-bottom: 4px solid white;
+				margin-right: 22%;
 			}
 		}
-	
+		.footer-right-part {
+			line-height: 20px;
+		}
+}
+
+
+
+// VERSION MOBILE
+
+@media(max-width: 732px){
+	.page-footer {
+		.footer-copyright{
+			.container {
+				.footer-acceuil-link{
+					font-weight: 500;
+					letter-spacing: 2px;
+					font-size: 32px;
+				}
+			}
+		}
+	}
+}
