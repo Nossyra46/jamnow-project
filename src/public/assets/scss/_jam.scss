@@ -1,4 +1,4 @@
-                  // VERSION DEKSTOP
+                  // VERSION DESKTOP
 
 .card-jam {
     background-color: white;
@@ -35,7 +35,18 @@
   height: 200px;
 
 }
-                  // VERSION MOBILE 
+
+.hashtag-align {
+  float:right;
+  margin-top: 10px;
+}
+
+.nom-participant {
+  text-align: left;
+  margin-right: 10px;
+  margin-left: 0;
+}
+                  // VERSION MOBILE
 
 @media all and (max-device-width: 480px){
   .card-jam {
