@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JamNow</title>
     <!-- IMPORTED CSS -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -44,20 +44,20 @@
         <li><a  ui-sref="jam">Rejoindre une jam</a></li>
         <li><a  ui-sref="contact">Contact</a></li>
       </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Connexion</a></li>
-        <li><a href="badges.html">Inscription</a></li>
-        <li><a href="collapsible.html">Créer une jam</a></li>
-        <li><a href="mobile.html">Rejoindre une jam</a></li>
-        <li><a href="mobile.html">Contact</a></li>
+      <ul class="side-nav side-nav-background" id="mobile-demo">
+        <li><a ui-sref="home">Acceuil</a></li>
+        <li><a ui-sref="connexion">Connexion</a></li>
+        <li><a ui-sref="inscription">Inscription</a></li>
+        <li><a ui-sref="newjam">Créer une jam</a></li>
+        <li><a ui-sref="jam">Rejoindre une jam</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
       </ul>
     </div>
   </nav>
     <!-- Renders the view indicated by our config file -->
     <div ui-view></div>
-
     <!-- FOOTER -->
-     <footer class="page-footer blue-grey darken-4">
+     <footer id="footer" class="page-footer blue-grey darken-4">
         <div class="container">
             <div class="row">
               <div class="col l6 s12 footer-left-part">
