@@ -1,10 +1,11 @@
-jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory', function($scope, $http, $state, ApiFactory) {
+jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory', 'LoginFactory', function($scope, $http, $state, ApiFactory, LoginFactory) {
   this.name = '';
   this.description = '';
   this.date = '';
   this.hour = '';
   this.location = '';
   this.limit = '';
+  this.id_admin = LoginFactory.user._id;
 
   this.addJam = function() {
     // Creating a Jam object with all the right properties filled by the user
@@ -14,7 +15,8 @@ jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory'
       date: this.date,
  			hour: this.hour,
  			location: this.location,
-      limit: this.limit
+      limit: this.limit,
+      id_admin: this.id_admin
  		};
 
  		// Sending the object to the API via the POST method

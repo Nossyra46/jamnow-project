@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-controller="JamController as jamCtrl">
       <div class="col s12 m8 l9">
         <div class="row">
           <img class=" cover-jam responsive-img" src="../../assets/images/bgsimplon.jpg" alt="jam-background">
@@ -7,12 +7,12 @@
         <div class="card-jam">
           <div class="row">
             <div class="col s6">
-              <h3>SIMPLON JAM !</h3>
+              <h3>{{jamCtrl.current.name}}</h3>
             </div>
             <div class="col s6 push-s4">
               <a class="btn-jam-position btn-floating btn-large waves-effect waves-light pink"><i class="material-icons">mode_edit</i></a>
             </div>
-            <div class="col s12">  <p>Juste pour fêter la fin de la promo 4 en musique, venez nombreux !</p></div>
+            <div class="col s12">  <p>{{jamCtrl.current.description}}</p></div>
         </div>
         <!-- card billet à inserer avec les infos -->
         </div>
@@ -29,7 +29,7 @@
               <h6>Organisateur</h6>
              <img class= "profil-jam-img circle responsive-img" src="../../assets/images/kevin.jpg" alt="kevin">
             <div class="informations-profil">
-              <h4>Kevin Andreani</h4>
+              <h4>{{jamCtrl.admin.firstname}} {{jamCtrl.admin.lastname}}</h4>
               <h6>29 ans</h6>
               <h6>Talent : Trompette</h6>
               <div class="chip">Jazz</div>

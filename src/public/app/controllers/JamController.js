@@ -1,12 +1,21 @@
 jamApp.controller('JamController', ['$scope', '$http', '$stateParams', 'ApiFactory', function($scope, $http, $stateParams, ApiFactory) {
+  var self = this;
+
   $http.get(ApiFactory.api + 'jams/' + $stateParams.id_jam)
   .then(
     function(response) {
-      console.log(response.data);
+      self.current = response.data;
+
+      $http.get(ApiFactory.api + 'users/'+self.current.id_admin).
+      then(
+        function(response) {
+          self.admin = response.data
+        },
+        function(err) {
+          console.log('Unable to retrieve admin from the api');
+        });
     },
     function(err) {
-      // body...
-      console.log('Unable to retrieve data from the api');
-    }
-    );
+      console.log('Unable to retrieve jam from the api');
+    });
 }]);
