@@ -9,6 +9,7 @@ jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory'
 
   this.addJam = function() {
     // Creating a Jam object with all the right properties filled by the user
+    console.log(LoginFactory.user);
     var jam = {
  			name: this.name,
       description: this.description,
