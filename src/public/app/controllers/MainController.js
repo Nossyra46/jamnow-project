@@ -1,4 +1,9 @@
-jamApp.controller('MainController', ['$scope', function($scope) {
-	this.coucou = 'recoucou';
-	console.log(this.coucou);
+jamApp.controller('MainController', ['$scope', 'LoginFactory', function($scope, LoginFactory) {
+	this.logged = LoginFactory.isLogged;
+	
+
+	this.logout = function() {
+		LoginFactory.isLogged = false;
+		LoginFactory.user = {};
+	};
 }]);

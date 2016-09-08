@@ -33,17 +33,18 @@
     <script type="text/javascript" src="../app/services/ApiFactory.min.js"></script>
     <script type="text/javascript" src="../app/services/LoginFactory.min.js"></script>
 </head>
-<body ng-app="jamnow">
+<body ng-app="jamnow" ng-controller="MainController as mainCtrl">
   <nav class="nav">
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">JAM!NOW</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="nav-liste right hide-on-med-and-down">
-        <li><a  ui-sref="connexion">Connexion</a></li>
-        <li><a  ui-sref="inscription.idform">Inscription</a></li>
-        <li><a  ui-sref="newjam">Créer une jam</a></li>
-        <li><a  ui-sref="jam">Rejoindre une jam</a></li>
-        <li><a  ui-sref="contact">Contact</a></li>
+        <li><a ui-sref="connexion" ng-hide="mainCtrl.logged">Connexion</a></li>
+        <li><a ng-click="mainCtrl.logout()" ng-show="mainCtrl.logged">Déconnexion</a></li>
+        <li><a ui-sref="inscription.idform">Inscription</a></li>
+        <li><a ui-sref="newjam">Créer une jam</a></li>
+        <li><a ui-sref="jam">Rejoindre une jam</a></li>
+        <li><a ui-sref="contact">Contact</a></li>
       </ul>
       <ul class="side-nav side-nav-background" id="mobile-demo">
         <li><a ui-sref="home">Acceuil</a></li>
