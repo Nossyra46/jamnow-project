@@ -29,9 +29,6 @@
 	margin: 0 auto;
 }
 
-
-
-
 .bg-img-inscription1 {
 	background-image:url('../images/bg5.jpg');
 	background-repeat: no-repeat;
@@ -159,10 +156,17 @@
 .side-nav-background {
 	background-image:url('../images/bg9.png');
 }
+// .card-jam-profil-background {
+// 	 background:rgba(255,255,255,0.8);
+// 	 margin-top: 50px;
+// 	 border-radius: 2px;
+// 	 width: 400px;
+// 	}
+// @media(max-width: 732px){
+// VERSION MOBIL
 .card-jam-profil-background {
 	 background:rgba(255,255,255,0.8);
 	 margin-top: 50px;
 	 border-radius: 2px;
 	}
-
-
+// }
