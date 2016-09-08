@@ -52,13 +52,14 @@
     <!-- END TITLE JAMS -->
     <!-- JAMS LOCATIONS -->
     <div class="container-cards-jam-home grey lighten-4">
+      
       <!-- #1 CARD-->
-      <div class="row">
+      <div class="row" ng-repeat="jam in homeCtrl.jams">
         <div class="card-jam-home">
           <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
             <div class="card-jam-home-title">
               <i class="material-icons icon-arrow">play_arrow</i>
-              <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">SIMPLON JAM!</a>
+              <a class="card-left-part-title" ui-sref="jam({id_jam: jam._id})">{{jam.name}}</a>
             </div>
           </div>
           <div class="col s2 m2 l3">
@@ -69,40 +70,6 @@
         </div>
       </div>
 
-      <!-- #2 CARD-->
-      <div class="row">
-          <div class="card-jam-home">
-            <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
-              <div class="card-jam-home-title">
-                <i class="material-icons icon-arrow">play_arrow</i>
-                <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">Fans de funk, venez !</a>
-              </div>
-            </div>
-            <div class="col s2 m2 l3">
-              <div class="card-jam-home-info">
-                <p class="center-align">29 août</p>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <!-- #3 CARD-->
-      <div class="row">
-          <div class="card-jam-home">
-            <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
-              <div class="card-jam-home-title">
-                <i class="material-icons icon-arrow">play_arrow</i>
-                <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">Amateurs de musique classique, opéra...</a>
-              </div>
-            </div>
-            <div class="col s2 m2 l3">
-              <div class="card-jam-home-info">
-                <p class="center-align">29 août</p>
-              </div>
-            </div>
-          </div>
-      </div>
-    </div>
     <!-- END JAMS LOCATIONS -->
 
   </div>

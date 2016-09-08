@@ -8,7 +8,9 @@ jamApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $
 	$stateProvider
 	.state('home',  {
 		url: "/",
-		templateUrl: "../views/pages/home.html"
+		templateUrl: "../views/pages/home.html",
+		controller: 'HomeController',
+		controllerAs: 'homeCtrl'
 	})
 	.state('jam',  {
 		url: "/jam/:id_jam",
