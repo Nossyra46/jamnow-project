@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 // DESKTOP VERSION
 .container-cards-jam-home {
 	height: 300px;
@@ -60,7 +59,26 @@
 			}
 		}
 	}
+.card-jam-profil {
+	text-align: left;
+	margin-bottom: 70px;
+	color:black;
+}
+.card-jam-profil-hr {
+	width: 280px;
+	height: 2px;
+	background:rgba(148,139,274,0.5);
 
+}
+.card-jam-home-title {
+	margin-top: 20px;
+}
+.card-jam-profil-location{
+		display:flex;
+	}
+	.card-jam-profil-participants{
+		display: flex;
+	}
 // MOBILE VERSION
 @media(max-width: 732px){
 	.card-dektop-header {
@@ -88,7 +106,7 @@
 			width: 80%;
 			border-right-style: dotted;
 			 border-width: 6px;
-
+		
 			.icon-fleche {
 				font-size: 102px;
 				margin-top: 3px;
@@ -112,5 +130,35 @@
 			}
 		}
 	}
+
+	.card-jam-profil {
+		text-align: left;
+		margin-bottom: 70px;
+		color:black;
+	}
+	.card-jam-profil-hr {
+		width: 280px;
+		height: 2px;
+		background:rgba(74,26,49,0.5);
+		border-radius: 30px;
+		border: 0px solid transparent;
+
+	}
+	.card-jam-home-title {
+		margin-top: 20px;
+		display: flex;
+		align-items:center;
+	}
+	.card-jam-profil-location{
+		display:flex;
+		align-items:center;
+	}
+	.card-jam-profil-participants{
+		display: flex;
+		align-items:center;
+	}
+	.card-left-part-title{
+		font-size: 22px;
+		margin-bottom: 10px;
+	}
 }
->>>>>>> 7510435d05706b1140d59d4df859035bddc2cef5

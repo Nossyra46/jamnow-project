@@ -1,6 +1,9 @@
 .profil-utilisateur {
-  text-align: center;
   color: white;
+  text-align: center;
+  .profil-utilisateur-title {
+    text-align: center;
+  }
   .informations-profil {
     margin-bottom: 20px;
   }
@@ -16,6 +19,11 @@
   .hashtags {
     margin-top: 20px;
   }
+}
+.profil-utilisateur-title {
+  font-size: 20px;
+  margin-top: 70px;
+  margin-bottom: 70px;
 }
 @media all and (max-device-width: 480px) {
   .profil-utilisateur {
