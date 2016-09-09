@@ -10,7 +10,7 @@ jamApp.controller('HomeController', ['$scope', '$http', '$stateParams', 'ApiFact
 			console.log(self.jams);
 		},
 		function(err) {
-			// body...
+			console.log("Unable to retrieve jams from the api.")
 	});
 
 	// TOASTING

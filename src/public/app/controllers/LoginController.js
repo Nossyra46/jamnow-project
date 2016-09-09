@@ -14,6 +14,7 @@ jamApp.controller('LoginController', ['$scope', '$http', '$state', 'ApiFactory',
 			console.log('logged in bro !');
 			LoginFactory.user = res.data;
 			LoginFactory.isLogged = true;
+			$state.reload();
 			$state.go('home',({message: "Vous êtes connecté!", error: false}));
 		}, function(err) {
 			console.log('ONOES');
