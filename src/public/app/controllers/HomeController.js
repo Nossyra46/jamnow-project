@@ -1,4 +1,4 @@
-jamApp.controller('HomeController', ['$scope', '$http', 'ApiFactory', function($scope, $http, ApiFactory) {
+jamApp.controller('HomeController', ['$scope', '$http', '$stateParams', 'ApiFactory', function($scope, $http, $stateParams, ApiFactory) {
 	// body...
 	var self = this;
 
@@ -12,4 +12,9 @@ jamApp.controller('HomeController', ['$scope', '$http', 'ApiFactory', function($
 		function(err) {
 			// body...
 	});
+
+	// TOASTING
+	if ($stateParams.message) {
+		Materialize.toast($stateParams.message, 4000);
+	};
 }]);

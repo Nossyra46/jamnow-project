@@ -9,6 +9,10 @@ jamApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $
 	.state('home',  {
 		url: "/",
 		templateUrl: "../views/pages/home.html",
+		params: {
+			message: null,
+			error: null
+		},
 		controller: 'HomeController',
 		controllerAs: 'homeCtrl'
 	})
