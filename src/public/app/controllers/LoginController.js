@@ -1,4 +1,4 @@
-jamApp.controller('LoginController', ['$scope', '$http', 'ApiFactory', 'LoginFactory', function($scope, $http, ApiFactory, LoginFactory){
+jamApp.controller('LoginController', ['$scope', '$http', '$state', 'ApiFactory', 'LoginFactory', function($scope, $http, $state, ApiFactory, LoginFactory){
 	
 	this.pseudo = "";
 	this.password = "";
@@ -13,10 +13,12 @@ jamApp.controller('LoginController', ['$scope', '$http', 'ApiFactory', 'LoginFac
 		.then(function(res){
 			console.log('logged in bro !');
 			LoginFactory.user = res.data;
-			console.log(LoginFactory.user);
 			LoginFactory.isLogged = true;
+			$scope.$emit('loginEvent');
+			$state.go('home',({message: "Vous êtes connecté!", error: false}));
 		}, function(err) {
 			console.log('ONOES');
+			Materialize.toast("Nom d'utilisateur ou mot de passe erroné", 3000);
 		});
 	};
 }]);

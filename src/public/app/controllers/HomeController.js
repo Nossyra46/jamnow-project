@@ -1,4 +1,4 @@
-jamApp.controller('HomeController', ['$scope', '$http', 'ApiFactory', function($scope, $http, ApiFactory) {
+jamApp.controller('HomeController', ['$scope', '$http', '$stateParams', 'ApiFactory', function($scope, $http, $stateParams, ApiFactory) {
 	// body...
 	var self = this;
 
@@ -10,6 +10,11 @@ jamApp.controller('HomeController', ['$scope', '$http', 'ApiFactory', function($
 			console.log(self.jams);
 		},
 		function(err) {
-			// body...
+			console.log("Unable to retrieve jams from the api.")
 	});
+
+	// TOASTING
+	if ($stateParams.message) {
+		Materialize.toast($stateParams.message, 4000);
+	};
 }]);
