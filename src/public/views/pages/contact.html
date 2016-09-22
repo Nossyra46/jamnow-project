@@ -1,36 +1,60 @@
-<div class="contact-page">
-<div class="container">
+<div class="row">
+  <form action="" class="col s8 offset-s2 m8 offset-m2 l6 offset-l3 card-contact">
+    <h1 class="contact-page-title">Contactez-nous !</h1>
+    <div class="input-field">
+      <i class="material-icons prefix">account_circle</i>
+      <input id="icon_prefix" type="text" class="validate" ng-model="ctrl.name">
+      <label for="icon_prefix">Votre nom</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">phone</i>
+      <input id="icon_telephone" type="tel" class="validate" ng-model="ctrl.phone_number">
+      <label for="icon_telephone">Votre téléphone</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix">email</i>
+      <input id="icon_email" type="email" class="validate" ng-model="ctrl.email">
+      <label for="icon_email">Votre Email</label>
+    </div>
+      <div class="input-field">
+        <textarea id="textarea1" class="materialize-textarea" ng-model="ctrl.message"></textarea>
+        <label for="textarea1">Votre message</label>
+      </div>
+    <button class="btn waves-effect waves-ligh contact-page-button-submit" type="submit" name="action" ng-click="ctrl.sendContactForm()">Envoyer
+    <i class="material-icons right">send</i></button>
+  </form>
+</div>
+
+
+<!-- <div class="contact-page">
 <div class="contact-page-form">
-  <div class="row" ng-controller="ContactController as ctrl">
-    <form class="col s12">
-      <div class="row">
-      <h1 class="contact-page-title">CONTACT</h1>
-        <div class="input-field col s12">
+  <div class="row card-contact" ng-controller="ContactController as ctrl">
+    <form>
+        <div class="col s12 offset-s2">
+        <h1 class="contact-page-title">Contactez-nous !</h1>
+        <div class="input-field">
           <i class="material-icons prefix">account_circle</i>
           <input id="icon_prefix" type="text" class="validate" ng-model="ctrl.name">
           <label for="icon_prefix">Votre nom</label>
         </div>
-        <div class="input-field col s12">
+        <div class="input-field">
           <i class="material-icons prefix">phone</i>
           <input id="icon_telephone" type="tel" class="validate" ng-model="ctrl.phone_number">
           <label for="icon_telephone">Votre téléphone</label>
         </div>
-      <div class="row">
-        <div class="input-field col s12">
+        <div class="input-field">
           <i class="material-icons prefix">email</i>
           <input id="icon_email" type="email" class="validate" ng-model="ctrl.email">
           <label for="icon_email">Votre Email</label>
         </div>
-      </div>
-        <div class="row">
-          <div class="input-field col s12">
+          <div class="input-field">
             <textarea id="textarea1" class="materialize-textarea" ng-model="ctrl.message"></textarea>
             <label for="textarea1">Votre message</label>
           </div>
-        </div>
         <button class="btn waves-effect waves-ligh contact-page-button-submit" type="submit" name="action" ng-click="ctrl.sendContactForm()">Envoyer
         <i class="material-icons right">send</i></button>
         <br>
+        </div>
       </form>
       </div>
       <div class="contact-jamnow-infos">
@@ -42,7 +66,7 @@
         </div>
       </div>
   </div>
-</div>
+</div> -->
 
 
               <!-- BACKGROUND -->
