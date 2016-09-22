@@ -29,12 +29,17 @@
           <!-- NOM -->
           <div class="input-field">
             <i class="material-icons prefix">perm_identity</i>
-            <input placeholder="Nom" id="nom_inscription2" type="text" class="validate">
+            <input placeholder="Nom" id="nom_inscription2" type="text" class="validate" ng-model="signCtrl.name">
+          </div>
+          <!-- PRENOM -->
+          <div class="input-field">
+            <i class="material-icons prefix">perm_identity</i>
+            <input placeholder="Prénom" id="prenom_inscription2" type="text" class="validate" ng-model="signCtrl.firstname">
           </div>
           <!-- EMAIL -->
           <div class="input-field">
              <i class="material-icons prefix">email</i>
-            <input placeholder="Email" id="email_inscription2" type="email" class="validate">
+            <input placeholder="Email" id="email_inscription2" type="email" class="validate" ng-model="signCtrl.email">
           </div>
           <!-- DATE DE NAISSANCE -->
           <div class="input-field">
@@ -43,7 +48,7 @@
           </div>
           <!-- BTN SE CONNECTER -->
           <div class="container-btn-seconnecter-inscription2">
-            <a class="waves-effect waves-light btn btn-seconnecter" ui-sref="inscription.confirmation">Se connecter</a>
+            <a class="waves-effect waves-light btn btn-seconnecter" ng-click="signCtrl.finalValidation()">Se connecter</a>
           </div>
         </form>
       </div>
