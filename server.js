@@ -20,11 +20,19 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // MongoDB
-mongoose.connect('mongodb://localhost/db_jamnow');
+if(process.env.NODE_ENV == 'production') {
+  // mongoose.createConnection('mongodb://client:jamnow@ds033996.mlab.com:33996/db_jamnow');
+  mongoose.createConnection(process.env.PROD_MONGODB);
+}
+else {
+  mongoose.connect('mongodb://localhost/db_jamnow');
+  // mongoose.createConnection('mongodb://client:jamnow@ds033996.mlab.com:33996/db_jamnow');
+};
+
 db = mongoose.connection;
 
 // DYnamically serving our RESTful api I guess ?
-app.use('/api', require(__dirname + '/src/app/routes/api.js'));
+app.use('/api', require(__dirname + '/dist/app/routes/api.min.js'));
 
 
 // Statically serving Angular application
@@ -34,4 +42,4 @@ app.get('*', function(req, res) {
 });
 
 // Start server
-app.listen(7070);
+app.listen(process.env.PORT || 7070);

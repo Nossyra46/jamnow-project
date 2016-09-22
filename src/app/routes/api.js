@@ -11,9 +11,9 @@ var localStrategy = require('passport-local').Strategy;
 
 
 // Models
-var User = require('../models/user');
-var Jam = require('../models/jam');
-var Contact = require('../models/contact');
+var User = require('../models/user.min');
+var Jam = require('../models/jam.min');
+var Contact = require('../models/contact.min');
 
 // Passport local strategy
 
