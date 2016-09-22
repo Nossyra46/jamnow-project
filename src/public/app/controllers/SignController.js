@@ -46,7 +46,7 @@ jamApp.controller("SignController", ["$scope", "$http", "$state", "ApiFactory", 
                 });
 
                 if (exists) {
-                    Materialize.toast("Ce nom d'utilisateur est déjà pris :/", 3e3);
+                    Materialize.toast("Ce nom d'utilisateur est déjà pris :/", 3000);
                 }
                 else {
                     $state.go("inscription.form")
