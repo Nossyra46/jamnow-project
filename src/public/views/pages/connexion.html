@@ -7,12 +7,12 @@
 					<div class="page-connexion-infos">
 													        
 						
-													        <!-- EMAIL -->
+													        <!-- USERNAME -->
 						<div class="row">
 							<div class="col offset-s1
 							 s10 offset-m2 m8 offset-l2 l8">
 								<div class="input-field ">
-								<input placeholder="Email" type="text" id="email_connexion" class="connexion-input" ng-model="loginCtrl.pseudo">
+								<input placeholder="Nom d'utilisateur" type="text" id="email_connexion" class="connexion-input" ng-model="loginCtrl.pseudo">
 								</div>							
 														<!-- MOT DE PASSE -->
 						<div class="input-field">
@@ -29,7 +29,7 @@
 						<a class="waves-effect red lighten-2 btn page-connexion-btn" ng-click="loginCtrl.login()">Connexion</a>
 					</p>
 					<p class="page-connexion-text-para">
-						<a class="page-connexion-texte">Vous n'avez pas encore de compte? </a>
+						<a class="page-connexion-texte" ui-sref="inscription.idform">Vous n'avez pas encore de compte? </a>
 					</p>
 				</div>
 			</div>

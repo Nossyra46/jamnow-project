@@ -19,7 +19,7 @@
         <a class="home-btn-inscription waves-effect waves-light btn" ui-sref="inscription.idform">S'inscrire</a>
       </div>
       <div class="row">
-        <a class="home-btn-connexion waves-effect waves-light btn">Se Connecter</a>
+        <a class="home-btn-connexion waves-effect waves-light btn" ui-sref="connexion">Se Connecter</a>
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@
     </div>
     <!-- END TITLE JAMS -->
     <!-- JAMS LOCATIONS -->
-    <div class="container-cards-jam-home grey lighten-4">
+    <div class="container-cards-jam-home grey lighten-4" style="overflow: scroll;">
       
       <!-- #1 CARD-->
       <div class="row" ng-repeat="jam in homeCtrl.jams">
@@ -64,7 +64,7 @@
           </div>
           <div class="col s2 m2 l3">
             <div class="card-jam-home-info">
-              <p class="center-align">12 août</p>
+              <p class="center-align">{{jam.date | date: 'd/MM/yyyy'}}</p>
             </div>
           </div>
         </div>

@@ -2,11 +2,13 @@ jamApp.controller('MainController', ['$scope', 'LoginFactory', function($scope, 
 	var self = this;
 	$scope.$on('loginEvent', function(event, data) {
 		self.logged = LoginFactory.isLogged;
-		console.log("I'm loaded");
+		self.user = LoginFactory.user;
+		console.log(self.user._id);
 	});
 	this.logout = function() {
 		// body...
 		LoginFactory.user = {};
+		self.user = {};
 		LoginFactory.isLogged = false;
 		self.logged = LoginFactory.isLogged;
 		Materialize.toast("Vous vous êtes déconnecté.", 3000);

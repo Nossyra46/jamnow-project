@@ -1,4 +1,6 @@
 jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory', 'LoginFactory', function($scope, $http, $state, ApiFactory, LoginFactory) {
+  var self = this;
+
   this.name = '';
   this.description = '';
   this.date = '';
@@ -27,8 +29,20 @@ jamApp.controller('NewjamController', ['$scope', '$http', '$state', 'ApiFactory'
  			this.response = 'omg you did it !';
  			console.log(this.response);
       var id = response.data._id;
-      $state.go('jam',({id_jam: id}));
 
+      var obj = {jams: id};
+      console.log(obj);
+      $http.put(ApiFactory.api+'users/'+self.id_admin, obj)
+      .then(
+        function(response) {
+          console.log('Jam added to your jams');
+          $state.go('jam',({id_jam: id}));
+        },
+        function(err) {
+          console.log(ApiFactory.api+'users/'+self.id_admin);
+          console.log('Unable to add Jam to user');
+        }
+      );
  		}, function(err) {
  			this.response = 'ONOES';
  			console.log(this.response);

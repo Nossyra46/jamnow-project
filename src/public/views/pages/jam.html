@@ -14,18 +14,18 @@
         <h3>{{jamCtrl.current.name}}</h3>
       </div>
       <div class="col s6 push-s4">
-        <a class="btn-jam-position btn-floating btn-large waves-effect waves-light pink"><i class="material-icons">mode_edit</i></a>
+        <a class="btn-jam-position btn-floating btn-large waves-effect waves-light pink" ng-click="jamCtrl.subscribeJam()"><i class="material-icons">input</i></a>
       </div>
       <div class="col s12">  <p class="description-jam">{{jamCtrl.current.description}}</p></div>
       <div class="row">
         <div class="date-jam col s12">
-          <h4><i class="material-icons prefix">date_range</i>12 Août</h4>
+          <h4><i class="material-icons prefix">date_range</i>{{jamCtrl.current.date|date: 'd/MM/yyyy'}}</h4>
         </div>
         <div class="heure-jam col s12">
-          <h4><i class="material-icons">access_time</i>18h30</h4>
+          <h4><i class="material-icons">access_time</i>{{jamCtrl.current.hour}}</h4>
         </div>
         <div class="heure-jam col s12">
-          <h5><i class="material-icons prefix">location_on</i>55 rue de Vincennes, 59400 Montreuil</h5>
+          <h5><i class="material-icons prefix">location_on</i>{{jamCtrl.current.location}}</h5>
         </div>
       </div>
     </div>
@@ -48,17 +48,17 @@
     <div class="profil-jam profil-utilisateur">
       <div class="bg-profil">
         <h6>Organisateur</h6>
-        <img class= "profil-jam-img circle responsive-img" src="../../assets/images/kevin.jpg" alt="kevin">
-        <div class="informations-profil">
+        <img class= "profil-jam-img circle responsive-img" src="../../assets/images/default-user.png" alt="kevin">
+        <div class="informations-profil"
           <h4>{{jamCtrl.admin.username}}</h4>
-          <h6>29 ans</h6>
-          <h6>Talent : Trompette</h6>
-          <div class="hashtags">
+          <!-- <h6>29 ans</h6> -->
+          <h6>Talent : {{jamCtrl.admin.talent}}</h6>
+          <!-- <div class="hashtags">
             <div class="chip">Jazz</div>
             <div class="chip">Death musette</div>
             <div class="chip">Carioca</div>
             <div class="chip">Funk</div>
-          </div>
+          </div> -->
           <!-- <div class="biopic">
           <p class="profil-white">A propos:</p>
           <p>Membre du groupe Black Musette, je suis à la recherche de nouveaux sons pour accompagner mon Haut-bois.</p>
@@ -72,59 +72,21 @@
 
 <div class="row">
   <div class="card-jam2">
-    <div class="fiche-participant">
+    <div class="fiche-participant" ng-repeat="jammer in jamCtrl.jammers">
       <div class="row">
-        <p>4 participants</p>
+        <p>{{jamCtrl.jammers.length}} participants</p>
         <div class="col s4">
-          <img src="../../assets/images/cecile.jpg" alt="image-profil" class="avatar-profil-small circle">
+          <img src="../../assets/images/default-user.png" alt="image-profil" class="avatar-profil-small circle">
         </div>
         <div class="col s4 pull-s1">
-          <p class="nom-participant">Cécile</p>
+          <p class="nom-participant">{{jammer.username}}</p>
         </div>
         <div class="col s4">
-          <div class="chip hashtag-align">Guitare</div>
+          <div class="chip hashtag-align">{{jammer.talent}}</div>
         </div>
       </div>
     </div>
-    <div class="fiche-participant">
-      <div class="row">
-        <div class="col s4">
-          <img src="../../assets/images/nine.jpg" alt="image-profil" class="avatar-profil-small circle">
-        </div>
-        <div class="col s4 pull-s1">
-          <p class="nom-participant">Nine</p>
-        </div>
-        <div class="col s4">
-          <div class="chip hashtag-align">Groupie</div>
-        </div>
-      </div>
-    </div>
-    <div class="fiche-participant">
-      <div class="row">
-        <div class="col s4">
-          <img src="../../assets/images/harysson.jpg" alt="image-profil" class="avatar-profil-small circle">
-        </div>
-        <div class="col s4 pull-s1">
-          <p class="nom-participant">Harysson</p>
-        </div>
-        <div class="col s4">
-          <div class="chip hashtag-align">Guitare</div>
-        </div>
-      </div>
-    </div>
-    <div class="fiche-participant">
-      <div class="row">
-        <div class="col s4">
-          <img src="../../assets/images/lydia.jpg" alt="image-profil" class="avatar-profil-small circle">
-        </div>
-        <div class="col s4 pull-s1">
-          <p class="nom-participant">Lydia</p>
-        </div>
-        <div class="col s4">
-          <div class="chip hashtag-align">Chant</div>
-        </div>
-      </div>
-    </div>
+
   </div>
 
 <!-- BACKGROUND -->

@@ -1,88 +1,59 @@
-<div class="container">
+<div class="container" ng-controller="ProfileController as profileCtrl">
   <div class="row">
     <div class="col s12">
       <div class="profil-utilisateur">
         <div class="bg-profil">
-        <h4>Profil</h4>
-         <img class="avatar-profil" "circle responsive-img" src="../../assets/images/kevin.jpg" alt="kevin">
+        <h4>{{profileCtrl.user.username}}</h4>
+         <img class="avatar-profil" "circle responsive-img" src="../../assets/images/default-user.png" alt="kevin">
         <div class="informations-profil">
-          <h4>Kevin Andreani</h4>
-          <h6>29 ans</h6>
-          <h6>Talent : Trompette</h6>
-          <div class="chip">Jazz</div>
+          <!-- <h4>{{profileCtrl.user.username}}</h4> -->
+          <!-- <h6>29 ans</h6> -->
+          <h6>Talent : {{profileCtrl.user.talent}}</h6>
+          <!-- <div class="chip">Jazz</div>
           <div class="chip">Death musette</div>
           <div class="chip">Carioca</div>
-          <div class="chip">Funk</div>
-          <div class="biopic">
+          <div class="chip">Funk</div> -->
+          <!-- <div class="biopic">
             <p class="profil-white">A propos:</p>
             <p>Membre du groupe Black Musette, je suis à la recherche de nouveaux sons pour accompagner mon Haut-bois.</p>
-            </div>
+            </div> -->
           </div>
         </div>
-        <div class="col s12">
+
+      <!-- LES PROCHAINES JAMS -->
+      <div class="col s12">
           <div class="profil-next-jam">
             <h2 class="profil-utilisateur-title">Les prochaines Jams auxquelles vous participez</h2>
           </div>
                   <!-- CARDS  -->
-        <div class="row">
-        <div class="card-jam-profil-background">
-        <div class="card-jam-profil">
-          <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
-            <div class="card-jam-home-title">
-              <!-- <i class="material-icons icon-arrow">play_arrow</i> -->
-              <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">SIMPLON JAM!</a>
-            </div>
-            <hr class="card-jam-profil-hr">
-            <div class="card-jam-profil-location">
-               <i class="small material-icons">location_on</i>
-              <p>12 rue de vincennes, Montreuil</p>
-            </div>
-            <hr class="card-jam-profil-hr">
-            <div class="card-jam-profil-participants">
-              <i class="small material-icons">perm_identity</i>
-              <p>24 particpants</p>
-            </div>
-          </div>
-          <div class="col s2 m2 l3">
-            <div class="card-jam-profil">
-              <p class="center-align card-jam-profil-date">12 octobre</p>
+          <div class="row" ng-repeat="jam in profileCtrl.jams">
+            <div class="card-jam-profil-background">
+              <div class="card-jam-profil">
+                <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
+                  <div class="card-jam-home-title">
+                    <!-- <i class="material-icons icon-arrow">play_arrow</i> -->
+                    <a class="card-left-part-title" href="jam({id_jam: jam._id})">{{jam.name}}</a>
+                  </div>
+                  <hr class="card-jam-profil-hr">
+                  <div class="card-jam-profil-location">
+                   <i class="small material-icons">location_on</i>
+                   <p>{{jam.location}}</p>
+                 </div>
+                 <hr class="card-jam-profil-hr">
+                 <div class="card-jam-profil-participants">
+                  <i class="small material-icons">perm_identity</i>
+                  <p>{{jam.jammers.length}} particpants</p>
+                </div>
+              </div>
+              <div class="col s2 m2 l3">
+                <div class="card-jam-profil">
+                  <p class="center-align card-jam-profil-date">{{jam.date | date: 'd/MM/yyyy'}}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-
-    <!-- CARDS2 -->
-    <div class="row">
-        <div class="card-jam-profil-background">
-        <div class="card-jam-profil">
-          <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
-            <div class="card-jam-home-title">
-           <!--    <i class="material-icons icon-arrow">play_arrow</i> -->
-              <a class="card-left-part-title" href="http://www.lorenzoverzini.com/prrr/">TURN A RADIO ON</a>
-            </div>
-            <hr class="card-jam-profil-hr">
-            <div class="card-jam-profil-location">
-               <i class="small material-icons">location_on</i>
-              <p>55 rue de la musique</p>
-            </div>
-            <hr class="card-jam-profil-hr">
-            <div class="card-jam-profil-participants">
-              <i class="small material-icons">perm_identity</i>
-              <p>13 particpants</p>
-            </div>
-          </div>
-          <div class="col s2 m2 l3">
-            <div class="card-jam-profil-date">
-              <p class="center-align date">25 sept</p>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>
-</div>
-     </div>
-         <!-- CARDS  -->
-        </div>
       </div>
     </div>
   </div>

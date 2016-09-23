@@ -17,7 +17,7 @@
       <div class="row">
         <div class="file-field input-field round-bg-light valign-wrapper">
             <i class="medium material-icons icon-imgfile-align valign">add_a_photo</i>
-              <input type="file">
+              <input type="file" disabled>
             <!-- <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
             </div> -->
@@ -41,11 +41,16 @@
              <i class="material-icons prefix">email</i>
             <input placeholder="Email" id="email_inscription2" type="email" class="validate" ng-model="signCtrl.email">
           </div>
-          <!-- DATE DE NAISSANCE -->
+          <!-- TALENT -->
           <div class="input-field">
+             <i class="material-icons prefix">grade</i>
+            <input placeholder="Talent" id="talent_inscription2" type="text" class="validate" ng-model="signCtrl.talent">
+          </div>
+          <!-- DATE DE NAISSANCE -->
+          <!-- <div class="input-field">
             <i class="material-icons prefix">redeem</i>
             <input placeholder="Date de naissance" id="date_naissance_inscription2" type="text" class="validate">
-          </div>
+          </div> -->
           <!-- BTN SE CONNECTER -->
           <div class="container-btn-seconnecter-inscription2">
             <a class="waves-effect waves-light btn btn-seconnecter" ng-click="signCtrl.finalValidation()">Se connecter</a>

@@ -6,10 +6,11 @@ jamApp.controller("SignController", ["$scope", "$http", "$state", "ApiFactory", 
     this.name = "";
     this.firstname = "";
     this.email = "";
+    this.talent = "";
     this.userid = "";
     this.finalValidation = function() {
-        if ("" == self.email){
-            Materialize.toast("Email non renseigné", 3000);
+        if ("" == self.email || "" == self.talent){
+            Materialize.toast("Email ou talent non renseigné", 3000);
         }
         else {
             var newUser = {
@@ -17,7 +18,8 @@ jamApp.controller("SignController", ["$scope", "$http", "$state", "ApiFactory", 
                 password: self.password,
                 lastname: self.name,
                 firstname: self.firstname,
-                email: self.email
+                email: self.email,
+                talent: self.talent
             };
 
             $http.post(ApiFactory.api + "users", newUser)

@@ -30,6 +30,7 @@
     <script type="text/javascript" src="../app/controllers/NewjamController.min.js"></script>
     <script type="text/javascript" src="../app/controllers/LoginController.min.js"></script>
     <script type="text/javascript" src="../app/controllers/SignController.min.js"></script>
+    <script type="text/javascript" src="../app/controllers/ProfileController.min.js"></script>
     <!-- DIRECTIVES -->
     <!-- SERVICES -->
     <script type="text/javascript" src="../app/services/ApiFactory.min.js"></script>
@@ -43,17 +44,19 @@
       <ul class="nav-liste right hide-on-med-and-down">
         <li><a  ui-sref="connexion" ng-hide="mainCtrl.logged">Connexion</a></li>
         <li><a  ng-click="mainCtrl.logout()" ng-show="mainCtrl.logged">Déconnexion</a></li>
+        <li><a  ui-sref="profil({id_user: mainCtrl.user._id})" ng-show="mainCtrl.logged">Profil</a></li>
         <li><a  ui-sref="inscription.idform" ng-hide="mainCtrl.logged">Inscription</a></li>
         <li><a  ui-sref="newjam" ng-show="mainCtrl.logged">Créer une jam</a></li>
-        <li><a  ui-sref="jam">Rejoindre une jam</a></li>
+        <!-- <li><a  ui-sref="jam">Rejoindre une jam</a></li> -->
         <li><a  ui-sref="contact">Contact</a></li>
       </ul>
       <ul class="side-nav side-nav-background" id="mobile-demo">
         <li><a  ui-sref="connexion" ng-hide="mainCtrl.logged">Connexion</a></li>
         <li><a  ng-click="mainCtrl.logout()" ng-show="mainCtrl.logged">Déconnexion</a></li>
+        <li><a  ui-sref="profil({id_user: mainCtrl.user._id})" ng-show="mainCtrl.logged">Profil</a></li>
         <li><a  ui-sref="inscription.idform" ng-hide="mainCtrl.logged">Inscription</a></li>
         <li><a  ui-sref="newjam" ng-show="mainCtrl.logged">Créer une jam</a></li>
-        <li><a  ui-sref="jam">Rejoindre une jam</a></li>
+        <!-- <li><a  ui-sref="jam">Rejoindre une jam</a></li> -->
         <li><a  ui-sref="contact">Contact</a></li>
       </ul>
     </div>

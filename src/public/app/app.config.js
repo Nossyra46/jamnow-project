@@ -35,7 +35,7 @@ jamApp.config(['$stateProvider', '$urlRouterProvider',function($stateProvider, $
 		templateUrl: "../views/pages/legal.html"
 	})
 	.state('profil',  {
-		url: "/profil",
+		url: "/profil/:id_user",
 		templateUrl: "../views/pages/profil.html"
 	})
 	.state('confidentialite',  {

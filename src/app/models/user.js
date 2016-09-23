@@ -11,9 +11,10 @@ var userSchema = new mongoose.Schema({
 	password: {type: String, required: true},
 	firstname: String,
 	lastname: String,
+	talent: {type: String, required: true},
 	email: {type: String, required: true},
 	location: String,
-	jams: [{type: mongoose.Schema.Types.ObjectId, ref: 'Jam'}]
+	jams: {type: [mongoose.Schema.Types.ObjectId], ref: 'Jams', default: []}
 });
 
 // comparing passwords
