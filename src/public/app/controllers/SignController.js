@@ -8,6 +8,8 @@ jamApp.controller("SignController", ["$scope", "$http", "$state", "ApiFactory", 
     this.email = "";
     this.talent = "";
     this.userid = "";
+
+    
     this.finalValidation = function() {
         if ("" == self.email || "" == self.talent){
             Materialize.toast("Email ou talent non renseigné", 3000);

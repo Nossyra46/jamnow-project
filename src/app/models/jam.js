@@ -12,6 +12,7 @@ var jamSchema = new mongoose.Schema({
 	name: {type: String, required: true},
 	description: String,
 	date: {type: Date, required: true},
+	hour: String,
 	id_admin: {type: mongoose.Schema.Types.ObjectId, ref:'Users'},
 	email: String,
 	location: {type: String, required: true},

@@ -22,11 +22,13 @@ app.use(passport.session());
 // MongoDB
 if(process.env.NODE_ENV == 'production') {
   // mongoose.createConnection('mongodb://client:jamnow@ds033996.mlab.com:33996/db_jamnow');
-  mongoose.createConnection(process.env.PROD_MONGODB);
+  // mongoose.createConnection(process.env.PROD_MONGODB);
+  mongoose.connect(process.env.PROD_MONGODB);
+
 }
 else {
   mongoose.connect('mongodb://localhost/db_jamnow');
-  // mongoose.createConnection('mongodb://client:jamnow@ds033996.mlab.com:33996/db_jamnow');
+  // mongoose.connect('mongodb://client:jamnow@ds033996.mlab.com:33996/db_jamnow');
 };
 
 db = mongoose.connection;

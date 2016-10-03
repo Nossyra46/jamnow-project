@@ -26,13 +26,13 @@
             <h2 class="profil-utilisateur-title">Les prochaines Jams auxquelles vous participez</h2>
           </div>
                   <!-- CARDS  -->
-          <div class="row" ng-repeat="jam in profileCtrl.jams">
+          <div class="row" ng-repeat="jam in profileCtrl.jams" style="background-color: white">
             <div class="card-jam-profil-background">
               <div class="card-jam-profil">
                 <div class="col s8 offset-s1 8 offset-m1 l5 offset-l2">
                   <div class="card-jam-home-title">
                     <!-- <i class="material-icons icon-arrow">play_arrow</i> -->
-                    <a class="card-left-part-title" href="jam({id_jam: jam._id})">{{jam.name}}</a>
+                    <a class="card-left-part-title" ui-sref="jam({id_jam: jam._id})">{{jam.name}}</a>
                   </div>
                   <hr class="card-jam-profil-hr">
                   <div class="card-jam-profil-location">
@@ -42,7 +42,7 @@
                  <hr class="card-jam-profil-hr">
                  <div class="card-jam-profil-participants">
                   <i class="small material-icons">perm_identity</i>
-                  <p>{{jam.jammers.length}} particpants</p>
+                  <p>{{jam.users.length}} particpants</p>
                 </div>
               </div>
               <div class="col s2 m2 l3">
