@@ -18,7 +18,6 @@ var jamSchema = new mongoose.Schema({
 	location: {type: String, required: true},
 	limit: Number,
 	users: [mongoose.Schema.Types.ObjectId]
-	// users: [{type: mongoose.Schema.Types.ObjectId, ref: 'Users'}]
 });
 
 // Return model
