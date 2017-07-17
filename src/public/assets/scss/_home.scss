@@ -17,10 +17,15 @@
 
 
 
+
 // NEXT JAMS
 
 .container-jam-home {
-	padding: 30px 20px;
+
+	h4 {
+		padding-top: 20px;
+	}
+
 
 	.container-title-jam-home {
 		width: 100%;
@@ -28,20 +33,27 @@
 	}
 
 	.container-cards-jam-home {
-		width: 80%;
+		width: 60%;
 		margin: 0 auto;
 		padding: 30px 0 20px 0;
-		border-radius: 5px;
+		overflow-y: scroll;
+		a {
+			color: #24C0C7;
+			text-transform: uppercase;
+		}
+
+		p {
+			margin-top: 25px;
+		}
+
+		i {
+			margin: 0 5px 5px 0;
+			font-size: 30px;
+		}
 
 		.card-jam-home {
 			.icon-arrow, .card-left-part-title {
 				vertical-align: middle;
-			}
-
-			.card-jam-home-info {
-				p {
-					margin: 0;
-				}
 			}
 		}
 	}
@@ -139,6 +151,25 @@
 
 // MOBILE VERSION
 @media(max-width: 732px){
+
+	.input-field input[type=search] {
+    display: block;
+    line-height: inherit;
+    padding-left: 1rem;
+    width: calc(100% - 1rem);
+  }
+
+	.container-jam-home {
+
+		h4 {
+			font-size: 1.8em;
+		}
+
+		.row .col.offset-s1 {
+			margin-left: 0;
+		}
+	}
+
 	.home-pitch {
 
 		.home-pitch-texte {
@@ -155,7 +186,6 @@
 	.home-icon-search {
 		// color: black;
 	}
-
 
 
 	// POURQUOI JAM!NOW
@@ -182,5 +212,13 @@
 			width: 40%;
 		}
 
+	}
+
+		.container-jam-home {
+			padding:10px;
+		}
+
+	.container-jam-home .container-cards-jam-home {
+		width: 100%;
 	}
 }
