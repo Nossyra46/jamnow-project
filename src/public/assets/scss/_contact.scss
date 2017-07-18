@@ -4,6 +4,7 @@
 			padding: 20px;
 		  max-width: 800px;
 		  border-radius: 4px;
+
 		h1 {
 			font-size: 30px;
 		}
@@ -27,3 +28,11 @@
 		.contact-page-button-submit {
 			margin-top: 40px;
 		}
+
+@media(max-width: 732px){
+	.card-contact {
+		margin-top: 30px;
+		min-width: 84%;
+
+	}
+}

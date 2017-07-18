@@ -39,7 +39,7 @@
 <body ng-app="jamnow" ng-controller="MainController as mainCtrl">
   <nav class="nav">
     <div class="nav-wrapper">
-      <img class= "jam-logo" src="../../assets/images/jamnow_white.png" alt="JAM!NOW">
+      <img class= "jam-logo" src="../../assets/images/jamnow_white.png" alt="JAM!NOW" ui-sref="home">
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="nav-liste right hide-on-med-and-down">
         <li><a  ui-sref="connexion" ng-hide="mainCtrl.logged">Connexion</a></li>
@@ -61,8 +61,10 @@
       </ul>
     </div>
   </nav>
+  <main>
     <!-- Renders the view indicated by our config file -->
     <div ui-view></div>
+    </main>
     <!-- FOOTER -->
      <footer id="footer" class="page-footer blue-grey darken-4">
         <div class="container">

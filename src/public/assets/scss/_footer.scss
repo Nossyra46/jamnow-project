@@ -3,6 +3,8 @@
 		font-size: 12px;
 		margin-top: 0px;
 		width: 100%;
+		//height: 300px;
+		bottom: 0;
 
 		.footer-title1, .footer-title2{
 			font-size: 30px;
@@ -23,6 +25,10 @@
 		.footer-right-part {
 			line-height: 20px;
 		}
+}
+
+footer.page-footer {
+	margin-top: 0; //correcting materialize
 }
 
 
