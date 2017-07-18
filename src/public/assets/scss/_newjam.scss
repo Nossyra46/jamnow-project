@@ -4,6 +4,21 @@
   padding: 20px;
   max-width: 800px;
   border-radius: 4px;
+
+  input:not([type]), input[type=text], input[type=password],
+  input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime], input[type=datetime-local], input[type=tel], input[type=number], input[type=search],
+  textarea.materialize-textarea {
+    color: #ffffff;
+    border-bottom: 1px solid #ffffff;
+  }
+
+.file-field input[type=file] {
+    border-bottom: none;
+  }
+
+  label {
+    color: #ffffff;
+  }
 }
 
 .newjam-card {

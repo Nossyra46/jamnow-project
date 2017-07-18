@@ -1,7 +1,8 @@
 				// VERSION DESKTOP
-.page-connexion {
+		.page-connexion {
 		color: white;
 		text-align: center;
+
 		.page-connexion-title {
 			font-size: 36px;
 			margin-top: 100px;
@@ -19,11 +20,22 @@
 			margin-bottom: 100px;
 			}
 		}
+
+		input:not([type]), input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date],
+		input[type=datetime], input[type=datetime-local],
+		input[type=tel], input[type=number], input[type=search], textarea.materialize-textarea {
+			color: white;
+			border-bottom: 1px solid white;
+		}
+
+		a {
+			color: white;
+		}
 	}
 
 
 					// VERSION MOBILE
-	
+
 	@media(max-width: 732px){
 .page-connexion {
 			text-align: center;
@@ -38,7 +50,7 @@
 		.connexion-input {
 			font-size: 40px;
 		}
-		
+
 		.page-connexion-texte {
 			font-size: 15px;
 			color: white;
@@ -46,5 +58,3 @@
 			text-align: center;
 		}
 	}
-
-
