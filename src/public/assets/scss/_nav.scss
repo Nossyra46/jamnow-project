@@ -16,8 +16,10 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-		.brand-logo {
+		.jam-logo {
 			margin-left: 5%;
+			padding: 5px;
+			width: 120px;
 		}
 	}
 }
@@ -27,8 +29,12 @@
 @media(max-width: 768px){
 	.nav {
 		.nav-wrapper {
-			.brand-logo {
+			.jam-logo {
 				margin-left: 0;
+				top: 40px; //FIXME weird css heritage to find
+				position:absolute;
+				left: 50%;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}
